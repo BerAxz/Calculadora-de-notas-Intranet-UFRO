@@ -6,15 +6,15 @@
   "permissions": ["activeTab", "scripting", "storage"],
   "host_permissions": ["https://intranet.ufro.cl/*"],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_popup": "src/popup/popup.html",
+    "default_icon": "assets/icon.png"
   },
   "content_scripts": [
     {
       "matches": ["https://intranet.ufro.cl/*"],
       "js": [
-        "calculo.js",
-        "content.js"]
+        "src/calculo.js",
+        "src/content.js"]
     }
   ]
 }
