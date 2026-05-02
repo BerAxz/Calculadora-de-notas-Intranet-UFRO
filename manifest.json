@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Calculadora nota minima UFRO",
+  "version": "1.0",
+  "description": "Calculadora de nota minima para aprobar una asignatura en la Universidad de La Frontera (UFRO) basado en intranet.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://intranet.ufro.cl/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://intranet.ufro.cl/*"],
+      "js": [
+        "calculo.js",
+        "content.js"]
+    }
+  ]
+}
